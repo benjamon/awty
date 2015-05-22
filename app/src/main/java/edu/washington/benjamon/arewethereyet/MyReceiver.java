@@ -12,7 +12,6 @@ public class MyReceiver extends BroadcastReceiver {
 
     @Override
     public void onReceive(Context context, Intent intent) {
-        SmsManager smsManager = SmsManager.getDefault();
-        smsManager.sendTextMessage("" + intent.getStringExtra("number"), null, "" + intent.getStringExtra("message"), null, null);
+        SmsManager.getDefault().sendTextMessage("" + intent.getStringExtra("number"), null, "" + intent.getStringExtra("message"), null, null);
     }
 }
